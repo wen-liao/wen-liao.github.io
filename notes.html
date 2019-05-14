@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Blog
+    </head>
+    <body>
+        <h1>Docker</h1>
+        <h2>简介</h2>
+        <p>Docker是一种虚拟化技术，与虚拟机相比存在启动块、性能优、磁盘使用少、系统支持量多等优点。</p>
+        <h2>概念</h2>
+        <dl>
+            <dt>镜像(Image)</dt><dd>一个特殊的文件系统，包含容器运行时需要的程序、库、资源、配置等文件，以及一些配置参数(环境变量、用户 etc.)。</dd>
+            <dt>容器(Container)</dt><dd>实质上是一个具有独立的命名空间的进程，是镜像创建的实例，具有自己的文件系统、用户ID空间等。</dd>
+            <dt>仓库(Respository)</dt><dd>一个集中存储、分发镜像的服务。</dd>
+            <dt>分层存储</dt><dd>镜像的文件系统是层次化的，由多层文件系统联合组成。</dd>
+        </dl>
+        <h2>C/S架构</h2>
+        <p>Docker采用了C/S架构，Docker守护进行(Daemon)作为服务端接受和处理来自客户端的请求（创建、运行、分发容器）。Client与Daemon的通信可以通过可执行命令的方式进行，也可以通过Remote API(socket或RESTful API)进行通信。</p>
+        <h2>使用Docker</h2>
+        <h3>启动docker</h3>
+        <p>sudo systemctl enable docker</p>
+        <p>sudo systemctl start docker</p>
+        <h3>重新启用Docker</h3>
+        <h3>启动一次性操作容器：<span style="font-style: italic">docker run IMAGE_NAME [COMMAND] [ARG...]</span></h3>
+        <p>例如：docker run ubuntu echo 'hello world'</p>
+        <h3>启动交互式容器：<span style="font-style:italic">docker run -t -i -name=自定义名称 IMAGE_NAME /bin/bash</span></h3>
+    </body>
+</html>
